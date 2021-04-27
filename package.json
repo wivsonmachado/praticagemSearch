@@ -1,0 +1,19 @@
+{
+  "name": "praticagemsearch",
+  "version": "1.0.0",
+  "description": "App para localizar um navio no site da praticagem-RJ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wivsonmachado/praticagemSearch.git"
+  },
+  "author": "Wivson Machado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wivsonmachado/praticagemSearch/issues"
+  },
+  "homepage": "https://github.com/wivsonmachado/praticagemSearch#readme"
+}
