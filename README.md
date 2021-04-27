@@ -1,15 +1,15 @@
 # Projeto App PraticagemSearch :ship:
 
 ### :dart: Objetivo
-Este projeto tem como objeto criar um app que notifique o usuário toda vez que um navio buscado entre no site da [praticagem](http://www.praticagem-rj.com.br/) do Rio de Janeiro.
+Este projeto tem como objeto criar um app que notifique o usuário toda vez que um navio buscado entre no site da [praticagem](https://www.newpilots.com.br/) do Rio de Janeiro.
 
 ### Regras de negócio
 O usuário deve cadastrar o nome de um navio a ser monitorado pelo app, o app deve notificar o usuario toda vez que o navio monitorado entrar na listagem do site da praticagem, mudar data e hora da manobra ou mesmo sair da listagem antes da manobra ser realizada.
 
 ### Fase 1: Back-End(Node.js)
 
-- [ ] Retirar do site da [praticagem](http://www.praticagem-rj.com.br/) a listagem de navios atualizada através de web scraping.
-- [ ] Criar uma função construtora com os atributos:
+- [x] Retirar do site da [praticagem](https://www.newpilots.com.br/) a listagem de navios atualizada através de web scraping.
+- [x] Criar uma função construtora com os atributos:
     ~~~ Javascript
     navio = {
         dataHora:,

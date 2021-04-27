@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "praticagemsearch",
   "version": "1.0.0",
   "description": "App para localizar um navio no site da praticagem-RJ",
