@@ -6,4 +6,4 @@ function navio(dataHora, nomeNavio, manobra, de, para){
     this.para = para
 }
 
-export default navio
+module.exports = navio

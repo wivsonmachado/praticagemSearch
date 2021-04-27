@@ -1,5 +1,7 @@
-import cheerio from 'cheerio'
-import navio from './objRaw.js'
+/*import cheerio from 'cheerio'
+import navio from './objRaw.js'*/
+const cheerio = require('cheerio')
+const navio = require('./objRaw.js')
 
 const getLista = html => {
     const arrayNavios = []
@@ -41,4 +43,4 @@ const getLista = html => {
     return arrayNavios           
 }
 
-export default getLista
+module.exports = getLista

@@ -1,4 +1,5 @@
-import axios from 'axios'
+//import axios from 'axios'
+const axios = require('axios')
 
 
 const htmlData = async () =>{
@@ -12,4 +13,4 @@ const htmlData = async () =>{
     
 }
 
-export default htmlData
+module.exports = htmlData

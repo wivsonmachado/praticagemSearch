@@ -1,6 +1,9 @@
-import express from 'express'
+/*import express from 'express'
 import htmlData from './htmlData.js'
-import getLista from './getList.js'
+import getLista from './getList.js'*/
+const express = require('express')
+const htmlData = require('./htmlData.js')
+const getLista = require('./getList.js')
 
 const app = express()
 
