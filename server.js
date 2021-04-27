@@ -4,7 +4,7 @@ import getLista from './getList.js'
 
 const app = express()
 
-app.get('/json', async (req, res) =>{
+app.get('/', async (req, res) =>{
     res.json(getLista(await htmlData()))
 })
 
