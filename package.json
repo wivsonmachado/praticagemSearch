@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/wivsonmachado/praticagemSearch/issues"
   },
-  "homepage": "https://github.com/wivsonmachado/praticagemSearch#readme"
+  "homepage": "https://github.com/wivsonmachado/praticagemSearch#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.6"
+  }
 }
