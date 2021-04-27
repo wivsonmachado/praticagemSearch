@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { load } from 'cheerio'
+import cheerio from 'cheerio'
 
 const url = 'https://www.newpilots.com.br/'
 
@@ -13,7 +13,7 @@ function navio(dataHora, nomeNavio, manobra, de, para){
 
 const getLista = html => {
     const arrayNavios = []
-    var $ = load(html)
+    var $ = cheerio.loadload(html)
             $('.quadro')
                 .eq(0)
                 .find('table')
