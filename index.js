@@ -7,7 +7,7 @@ const getLista = require('./getList.js')
 
 const app = express()
 
-app.get('/', async (req, res) =>{
+app.get('/json', async (req, res) =>{
     res.json(getLista(await htmlData()))
 })
 
