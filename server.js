@@ -3,7 +3,7 @@ import express from 'express'
 const app = express()
 
 app.get('/',(req, res) =>{
-    res.end('<h1>Ola, mundo!</h1>')
+    res.json({nome: 'wivson'})
 })
 
 app.listen(8000, ()=>{
