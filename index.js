@@ -1,55 +1,9 @@
 import axios from 'axios'
-import cheerio from 'cheerio'
+import getLista from './getList.js'
 
-const url = 'https://www.newpilots.com.br/'
 
-function navio(dataHora, nomeNavio, manobra, de, para){
-    this.dataHora = dataHora
-    this.nomeNavio = nomeNavio
-    this.manobra = manobra
-    this.de = de
-    this.para = para
-}
-
-const getLista = html => {
-    const arrayNavios = []
-    var $ = cheerio.loadload(html)
-            $('.quadro')
-                .eq(0)
-                .find('table')
-                .eq(2)
-                .find('tr')
-                .each(function(i){
-                    var dataHora = $(this)
-                            .find('td')
-                            .eq(0)
-                            .text()
-                            .trim()
-                    var nomeNavio = $(this)
-                            .find('td')
-                            .eq(1)
-                            .text()
-                            .trim()
-                    var manobra = $(this)
-                            .find('td')
-                            .eq(6)
-                            .text()
-                            .trim()
-                    var de = $(this)
-                            .find('td')
-                            .eq(7)
-                            .text()
-                            .trim()
-                    var para = $(this)
-                            .find('td')
-                            .eq(8)
-                            .text()
-                            .trim()
-                    arrayNavios.push(new navio(dataHora, nomeNavio, manobra, de, para))                
-                })
-    console.log(arrayNavios)
-    //return arrayNavios           
-}
+const fAll = () =>{
+    const url = 'https://www.newpilots.com.br/'
 
 axios.get(url)
     .then(res =>{
@@ -58,3 +12,6 @@ axios.get(url)
     .catch(error => {
         console.log(error)
     })
+}
+
+export default fAll
