@@ -1,15 +1,13 @@
-import axios from 'axios'
+import express from 'express'
+import htmlData from './htmlData.js'
+import getLista from './getList.js'
 
+const app = express()
 
-const htmlData = async () =>{
-    try{
-        const url = 'https://www.newpilots.com.br/'
-        const html = axios.get(url)
-        return (await html).data  
-    }catch(e){
-        console.log(e)
-    }
-    
-}
+app.get('/', async (req, res) =>{
+    res.json(getLista(await htmlData()))
+})
 
-export default htmlData
+app.listen(3000, ()=>{
+    console.log('Servidor rodando na porta 3000')
+})
