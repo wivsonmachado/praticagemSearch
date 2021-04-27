@@ -19,6 +19,12 @@ O usuário deve cadastrar o nome de um navio a ser monitorado pelo app, o app de
         para:
     }
     ~~~
+- [x] Separar em modulos(boa prática).
+- [ ] Criar uma função que agregue o axios e o cheerio. (Essa função pode ser o próprio axios???)
+    - O axios deve desvolver o html(data)
+    - O cheerio recupera o html(data) e faz o web scraping
+- [ ] Implementar um async/await na rota no express para o script web scraping conseguir devolver o array de objetos criado.
+    - O async/await vai trabalhar em cima da função que junta o axios e o cheerio.
 - [ ] Desenvolver uma API REST em formato JSON com os dados retirados para ser consumida pelo app.
 - [ ] Implementar requisição constante ao site da praticagem para atualizar o JSON.(atualmente o site da praticagem atualiza a cada 5 minutos)
 
