@@ -1,17 +1,15 @@
 import axios from 'axios'
-import getLista from './getList.js'
 
 
-const fAll = () =>{
-    const url = 'https://www.newpilots.com.br/'
-
-axios.get(url)
-    .then(res =>{
-        getLista(res.data)
-    })
-    .catch(error => {
-        console.log(error)
-    })
+const htmlData = async () =>{
+    try{
+        const url = 'https://www.newpilots.com.br/'
+        const html = axios.get(url)
+        return (await html).data  
+    }catch(e){
+        console.log(e)
+    }
+    
 }
 
-export default fAll
+export default htmlData
