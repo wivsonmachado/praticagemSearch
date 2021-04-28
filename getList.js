@@ -40,7 +40,7 @@ const getLista = html => {
                             .trim()
                     arrayNavios.push(new navio(dataHora, nomeNavio, manobra, de, para))                
                 })
-    //console.log(arrayNavios)
+    //onsole.log(arrayNavios)
     return arrayNavios           
 }
 
