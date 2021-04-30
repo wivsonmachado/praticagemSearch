@@ -16,8 +16,22 @@ function vessel(ship) {
             if (retornaTrueOrFalse() === 1) {
                 function busca(i) {
                     if (i.nomeNavio === ship) {
-                        //return `O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} para ${i.para}`
-                        console.log(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} para ${i.para}`)
+                        
+                        switch (i.manobra) {
+                            case 'ENTRADA':
+                                //return `O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} para ${i.para}.`
+                                console.log(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} para ${i.para}.`)
+                                break
+                            case 'MUDANÇA':
+                                //return `O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de} para ${i.para}.`
+                                console.log(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de} para ${i.para}.`)
+                                break
+                            case 'SAÍDA':
+                                //return `O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de}.`
+                                console.log(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de}.`)
+                                break
+                        }
+                        
                     }
                 }
                 buscaIndex.forEach(busca)
@@ -29,4 +43,4 @@ function vessel(ship) {
 
 }
 
-vessel('LOG-IN PANTANAL')
+vessel('MSC SOFIA CELESTE')
