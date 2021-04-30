@@ -29,28 +29,4 @@ function vessel(ship) {
 
 }
 
-vessel('LINCOLN PARK')
-
-/*
-CASE 1
-lista mostra o mesmo navio com manobras diferentes:
-
-O navio LINCOLN PARK está com prático marcado para 29/04 16:30hs, realizará uma MUDANÇA para WPT 64
-O navio LINCOLN PARK está com prático marcado para 30/04 06:30hs, realizará uma MUDANÇA para SHELL
-
-desenvolver código para tratar caso com manobras diferentes e retornar as duas.
-
-CASE 2
-lista mostra o mesmo navio com a mesma manobra mais de uma vez:
-
-O navio MSC SOFIA CELESTE está com prático marcado para 02/05 15:00hs, realizará uma ENTRADA para TECONT3
-O navio MSC SOFIA CELESTE está com prático marcado para 02/05 15:00hs, realizará uma ENTRADA para TECONT3
-
-desenvolver código para comparar e retornar somente uma manobra
-
-CASE 3
-O navio MSC SOFIA CELESTE está com prático marcado para 03/05 06:00hs, realizará uma SAÍDA para
-
-tratar código para que retorne de forma correta manobras de entrada(para), saída(de) e mudança(de -> para)
-primeira idéia é fazer com switch
-*/
+vessel('LOG-IN PANTANAL')
