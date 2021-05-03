@@ -31,7 +31,7 @@ O usuário deve cadastrar o nome de um navio a ser monitorado pelo app, o app de
 ### Fase 2: Front-end web(JavaScript)
 
 - [x] Desenvolver função para buscar e retornar navio buscado.
-- [ ] Realizar tratamento de dados com o retorno da busca.
+- [x] Realizar tratamento de dados com o retorno da busca.
     > CASE 1
     Lista mostra o mesmo navio com manobras diferentes:
     *O navio LINCOLN PARK está com prático marcado para 29/04 16:30hs, realizará uma MUDANÇA para WPT 64
