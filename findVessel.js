@@ -19,12 +19,15 @@ function returnSwitch(i){
             break
     }
     document.getElementById('resultado').innerHTML = resultado
+    document.querySelector('#navio').value = ''
 }
 
 
 
-function vessel(ship) {
-    ship = document.querySelector('#navio').value
+function vessel(shipName) {
+    document.getElementById('resultado').innerHTML = ''
+    shipName = document.querySelector('#navio').value
+    ship = shipName.toUpperCase()
     let url = 'http://praticagemsearch.app.br/json'
     let buscaIndex
     fetch(url).then((res) => res.json())
@@ -59,7 +62,6 @@ function vessel(ship) {
             }
         }).catch((error) => console.log(error.message))
     
-    document.querySelector('#navio').value = ''    
 
 }
 
