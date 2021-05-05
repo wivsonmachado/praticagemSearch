@@ -4,10 +4,12 @@ import getLista from './getList.js'*/
 const express = require('express')
 const htmlData = require('./htmlData.js')
 const getLista = require('./getList.js')
+const cors = require('cors')
 
 const app = express()
 
-app.get('/json', async (req, res) =>{
+app.get('/json', cors(), async (req, res) =>{
+    res.setHeader()
     res.json(getLista(await htmlData()))
 })
 
