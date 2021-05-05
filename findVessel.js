@@ -3,29 +3,38 @@
 
 
 function returnSwitch(i){
-    let resultado
-    switch (i.manobra) {
+    let divPai = document.querySelector('#res')
+    let divFilho = document.createElement('p')
+    let texto
+    switch (i.manobra) {            
         case 'ENTRADA':
-            resultado = `O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} para ${i.para}.`
+            texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} para ${i.para}.`)
+            
+            divFilho.appendChild(texto)
+            divPai.appendChild(divFilho)
             //console.log(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} para ${i.para}.`)
             break
         case 'MUDANÇA':
-            resultado = `O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de} para ${i.para}.`
+            texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de} para ${i.para}.`)
+            
+            divFilho.appendChild(texto)
+            divPai.appendChild(divFilho)
             //console.log(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de} para ${i.para}.`)
             break
         case 'SAÍDA':
-            resultado = `O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de}.`
+            texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de}.`)
+            
+            divFilho.appendChild(texto)
+            divPai.appendChild(divFilho)
             //console.log(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de}.`)
             break
     }
-    document.getElementById('resultado').innerHTML = resultado
     document.querySelector('#navio').value = ''
 }
 
 
 
 function vessel(shipName) {
-    document.getElementById('resultado').innerHTML = ''
     shipName = document.querySelector('#navio').value
     ship = shipName.toUpperCase()
     let url = 'http://praticagemsearch.app.br/json'
