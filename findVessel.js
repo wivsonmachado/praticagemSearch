@@ -1,30 +1,30 @@
-//const fetch = require('node-fetch')
-
-
-
 function returnSwitch(i){
     let divPai = document.querySelector('#res')
-    let divFilho = document.createElement('p')
+    let divFilho = document.createElement('div')
+    let divNeto = document.createElement('p')
     let texto
     switch (i.manobra) {            
         case 'ENTRADA':
             texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} para ${i.para}.`)
             
-            divFilho.appendChild(texto)
+            divNeto.appendChild(texto)
+            divFilho.appendChild(divNeto)
             divPai.appendChild(divFilho)
             //console.log(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} para ${i.para}.`)
             break
         case 'MUDANÇA':
             texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de} para ${i.para}.`)
             
-            divFilho.appendChild(texto)
+            divNeto.appendChild(texto)
+            divFilho.appendChild(divNeto)
             divPai.appendChild(divFilho)
             //console.log(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de} para ${i.para}.`)
             break
         case 'SAÍDA':
             texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de}.`)
             
-            divFilho.appendChild(texto)
+            divNeto.appendChild(texto)
+            divFilho.appendChild(divNeto)
             divPai.appendChild(divFilho)
             //console.log(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de}.`)
             break
@@ -35,6 +35,13 @@ function returnSwitch(i){
 
 
 function vessel(shipName) {
+    let divTotal = document.getElementsByTagName('div').length
+    for(let i = divTotal; i >= 4; i--){
+        let el = document.getElementsByTagName('div')[i]
+        if(el){
+        el.parentNode.removeChild(el)
+        }
+    }
     shipName = document.querySelector('#navio').value
     ship = shipName.toUpperCase()
     let url = 'http://praticagemsearch.app.br/json'
@@ -66,12 +73,11 @@ function vessel(shipName) {
                     })
                 }
             } else {
-                document.querySelector('#resultado').innerHTML = 'Navio não encontrado'
+                document.querySelector('#navio').value = ''
+                alert('Navio não encontrado') 
                 //console.log('Navio não encontrado')
             }
         }).catch((error) => console.log(error.message))
     
 
 }
-
-//vessel('HAKATA QUEEN')
