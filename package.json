@@ -20,6 +20,7 @@
   "homepage": "https://github.com/wivsonmachado/praticagemSearch#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
     "cheerio": "^1.0.0-rc.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
