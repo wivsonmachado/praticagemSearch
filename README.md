@@ -48,11 +48,12 @@ O usuário deve cadastrar o nome de um navio a ser monitorado pelo app, o app de
     *O navio MSC SOFIA CELESTE está com prático marcado para 03/05 06:00hs, realizará uma SAÍDA para*
     **Tratar código para que retorne de forma correta manobras de entrada(para), saída(de) e mudança(de -> para)
     primeira idéia é fazer com switch**
-- [ ] Alterar todos os console.log para return, returns com mais de uma informação colocar dentro de um array e tratar
+- [x] Alterar todos os console.log para DOM
+- [ ] Resultados com mais de uma informação colocar dentro de um array e tratar
 - [ ] Desenvolver função na qual o usuário insira um nome de navio e a função armazene e a partir daí começe a monitorar esse nome fazendo requisições periódicas na API.
     - [ ] Inserir opção para que o usuário possa escolher entre monitorar ou não o nome inserido.
 - [ ] Implementar página ao estilo google para procurar um navio
-    - [ ] Implementar o arquivo finVessel.js no front-end e entender como o fetch funciona no browser 
+    - [x] Implementar o arquivo finVessel.js no front-end e entender como o fetch funciona no browser 
 
 ### Fase 3: Front-end mobile(Kotlin)
 
