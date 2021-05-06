@@ -81,7 +81,7 @@ function vessel(shipName) {
                 let divFilho = document.createElement('div')
                 let divNeto = document.createElement('p')
                 let texto
-                texto = document.createTextNode(`Até o momento navio ${ship} não foi adicionado à lista da praticagem-rj.`)
+                texto = document.createTextNode(`Até o momento o navio ${ship} não foi adicionado à lista da praticagem-rj.`)
             
                 divFilho.className = 'resultado'
                 divNeto.appendChild(texto)
