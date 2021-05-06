@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticagem Search</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="/js/findVessel.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1 d-flex justify-content-center">Procure o navio</h1>
+        <div class="form-group d-flex justify-content-center">
+            <label for="navio"></label>
+            <input type="text" class="m-3" id="navio" placeholder="Nome do navio">
+            <button class="btn btn-primary m-3" onclick="vessel()" type="submit">Search</button>
+        </div>
+        <div class="h5 d-flex justify-content-center">
+        <div id="res"></div>
+        </div>
+    </div>
+</body>
+</html>
