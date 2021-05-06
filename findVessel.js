@@ -7,6 +7,7 @@ function returnSwitch(i){
         case 'ENTRADA':
             texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} para ${i.para}.`)
             
+            divFilho.className = 'resultado'
             divNeto.appendChild(texto)
             divFilho.appendChild(divNeto)
             divPai.appendChild(divFilho)
@@ -15,6 +16,7 @@ function returnSwitch(i){
         case 'MUDANÇA':
             texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de} para ${i.para}.`)
             
+            divFilho.className = 'resultado'
             divNeto.appendChild(texto)
             divFilho.appendChild(divNeto)
             divPai.appendChild(divFilho)
@@ -23,6 +25,7 @@ function returnSwitch(i){
         case 'SAÍDA':
             texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de}.`)
             
+            divFilho.className = 'resultado'
             divNeto.appendChild(texto)
             divFilho.appendChild(divNeto)
             divPai.appendChild(divFilho)
@@ -35,11 +38,11 @@ function returnSwitch(i){
 
 
 function vessel(shipName) {
-    let divTotal = document.getElementsByTagName('div').length
-    for(let i = divTotal; i >= 4; i--){
-        let el = document.getElementsByTagName('div')[i]
+    let divTotal = document.getElementsByClassName('resultado').length
+    for(let i = divTotal; i > -1 ; i--){
+        let el = document.getElementsByClassName('resultado')[i]
         if(el){
-        el.parentNode.removeChild(el)
+        el.remove()
         }
     }
     shipName = document.querySelector('#navio').value
