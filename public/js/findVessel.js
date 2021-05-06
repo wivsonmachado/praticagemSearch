@@ -77,7 +77,17 @@ function vessel(shipName) {
                 }
             } else {
                 document.querySelector('#navio').value = ''
-                alert('Navio não encontrado') 
+                let divPai = document.querySelector('#res')
+                let divFilho = document.createElement('div')
+                let divNeto = document.createElement('p')
+                let texto
+                texto = document.createTextNode(`Até o momento navio ${ship} não foi adicionado à lista da praticagem-rj.`)
+            
+                divFilho.className = 'resultado'
+                divNeto.appendChild(texto)
+                divFilho.appendChild(divNeto)
+                divPai.appendChild(divFilho)
+                //alert('Navio não encontrado') 
                 //console.log('Navio não encontrado')
             }
         }).catch((error) => console.log(error.message))
