@@ -38,6 +38,8 @@ function returnSwitch(i){
 
 
 function vessel(shipName) {
+    let divRes = document.querySelector('#res')
+    divRes.innerHTML = '<div class="spinner-border text-danger" role="status"><span class="sr-only">Searching...</span></div>'
     let divTotal = document.getElementsByClassName('resultado').length
     for(let i = divTotal; i > -1 ; i--){
         let el = document.getElementsByClassName('resultado')[i]
@@ -51,6 +53,7 @@ function vessel(shipName) {
     let buscaIndex
     fetch(url).then((res) => res.json())
         .then(json => {
+            divRes.innerHTML = ''
             buscaIndex = json
             function retornaTrueOrFalse() {
                 if (buscaIndex.findIndex(i => i.nomeNavio === ship) < 0) {
