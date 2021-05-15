@@ -48,7 +48,7 @@ function vessel(shipName) {
         }
     }
     shipName = document.querySelector('#navio').value
-    ship = shipName.toUpperCase()
+    ship = shipName.toUpperCase().trim()
     let url = 'http://praticagemsearch.app.br/json'
     let buscaIndex
     fetch(url).then((res) => res.json())
