@@ -12,12 +12,19 @@
     "type": "git",
     "url": "git+https://github.com/wivsonmachado/praticagemSearch.git"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "Wivson Machado",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wivsonmachado/praticagemSearch/issues"
   },
   "homepage": "https://github.com/wivsonmachado/praticagemSearch#readme",
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
