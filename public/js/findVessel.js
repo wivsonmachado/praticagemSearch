@@ -49,7 +49,7 @@ function vessel(shipName) {
     }
     shipName = document.querySelector('#navio').value
     ship = shipName.toUpperCase().trim()
-    let url = 'http://praticagemsearch.app.br/json'
+    let url = 'http://localhost:3000/json'
     let buscaIndex
     fetch(url).then((res) => res.json())
         .then(json => {
