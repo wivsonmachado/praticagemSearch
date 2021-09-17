@@ -23,5 +23,13 @@
         <div id="res"></div>
         </div>
     </div>
+    <script>
+        var input = document.getElementById('navio')
+        input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            vessel()
+        }
+    })
+    </script>
 </body>
 </html>
