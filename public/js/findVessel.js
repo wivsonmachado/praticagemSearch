@@ -38,7 +38,8 @@ function returnSwitch(i){
 
 
 function vessel(shipName) {
-    if(shipName === ""){
+    var vesselName = document.querySelector('#navio').value
+    if(vesselName !== ""){
         let divRes = document.querySelector('#res')
         divRes.innerHTML = '<div class="spinner-border text-danger" role="status"><span class="sr-only">Searching...</span></div>'
         let divTotal = document.getElementsByClassName('resultado').length
