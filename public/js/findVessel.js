@@ -49,7 +49,7 @@ function vessel(shipName) {
     }
     shipName = document.querySelector('#navio').value
     ship = shipName.toUpperCase().trim()
-    let url = 'http://localhost:3000/json'
+    let url = 'http://shielded-springs-02765.herokuapp.com/json'
     let buscaIndex
     fetch(url).then((res) => res.json())
         .then(json => {
