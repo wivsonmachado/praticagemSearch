@@ -59,12 +59,12 @@ function vessel(shipName) {
                 buscaIndex = json
                 function retornaTrueOrFalse() {
                     if (buscaIndex.findIndex(i => i.nomeNavio === ship) < 0) {
-                        return -1
+                        return false
                     } else {
-                        return 1
+                        return true
                     }
                 }
-                if (retornaTrueOrFalse() === 1) {
+                if (retornaTrueOrFalse()) {
                     const navioEncontrado = buscaIndex.filter((i) => i.nomeNavio === ship)
                     //console.log(navioEncontrado)
                     if(navioEncontrado.length > 1){
