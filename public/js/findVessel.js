@@ -102,3 +102,38 @@ function vessel(shipName) {
     
 
 }
+
+let url = 'https://shielded-springs-02765.herokuapp.com/json'
+        let arrFull
+        const nameVesselArray = fetch(url).then((res) => res.json())
+            .then(json => {
+                arrFull = json.map(e => {
+                    return { "nomeNavio": e.nomeNavio }
+                })
+                let arrFiltered = new Set()
+                const newArrFull = arrFull.filter(i => {
+                    const isPresentInSet = arrFiltered.has(i.nomeNavio)
+                    arrFiltered.add(i.nomeNavio)
+                    return !isPresentInSet
+                })
+                return newArrFull.sort((a, b) => {
+                    let ordened = a.nomeNavio < b.nomeNavio ? -1 : 1
+                    return ordened
+                })
+            }).catch(err => console.log(err))
+
+        function firedSearch() {
+            vessel()
+        }
+
+        Promise.all([nameVesselArray]).then(res => {
+            console.log(res[0])
+            $('#navio').autocomplete({
+                source: res[0],
+                highlightClass: 'text-danger',
+                label: "nomeNavio",
+                treshold: 1,
+                onSelectItem: firedSearch,
+                maximumItems: 0
+            });
+        })
