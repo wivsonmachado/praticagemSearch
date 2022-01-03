@@ -127,7 +127,7 @@ let url = 'https://shielded-springs-02765.herokuapp.com/json'
         }
 
         Promise.all([nameVesselArray]).then(res => {
-            console.log(res[0])
+            //console.log(res[0])
             $('#navio').autocomplete({
                 source: res[0],
                 highlightClass: 'text-danger',
