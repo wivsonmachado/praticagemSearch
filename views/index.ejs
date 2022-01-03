@@ -31,8 +31,9 @@
     <script>
         var input = document.getElementById('navio')
         input.addEventListener("keyup", function (event) {
-            if (event.keyCode === 13) {
+            if (event.key === 'Enter') {
                 vessel()
+            }
         })
     </script>
 
