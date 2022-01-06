@@ -116,7 +116,14 @@ let url = 'https://shielded-springs-02765.herokuapp.com/json'
                     arrFiltered.add(i.nomeNavio)
                     return !isPresentInSet
                 })
-                return newArrFull.sort((a, b) => a.nomeNavio < b.nomeNavio ? -1 : 1)
+
+                newArrFull.sort((a, b) => a.nomeNavio < b.nomeNavio ? -1 : 1) //Ordem alfabética
+                let arrTypedChar = newArrFull.filter(i => i.nomeNavio.indexOf("M") == 0) //Novo array apenas com letra iniciada
+                let arrUnTypedChar = newArrFull.filter(i => i.nomeNavio.indexOf("M")) //Array completo ordenado com nomes com letra digitada na frente
+
+                arrUnTypedChar.forEach(i => arrTypedChar.push(i))
+
+                return arrTypedChar
             }).catch(err => console.log(err))
 
         function firedSearch() {
