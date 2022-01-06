@@ -116,10 +116,7 @@ let url = 'https://shielded-springs-02765.herokuapp.com/json'
                     arrFiltered.add(i.nomeNavio)
                     return !isPresentInSet
                 })
-                return newArrFull.sort((a, b) => {
-                    let ordened = a.nomeNavio < b.nomeNavio ? -1 : 1
-                    return ordened
-                })
+                return newArrFull.sort((a, b) => a.nomeNavio < b.nomeNavio ? -1 : 1)
             }).catch(err => console.log(err))
 
         function firedSearch() {
