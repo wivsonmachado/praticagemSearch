@@ -127,12 +127,11 @@ function firedSearch() {
 }
 
 let input1 = document.getElementById('navio')
-let str = ''
 
-function getArray(){
+function getArray(string){
     Promise.all([nameVesselArray]).then(res => {
-        let arrTypedChar = res[0].filter(i => i.nomeNavio.indexOf(str.toUpperCase()) == 0) //Novo array apenas com letra iniciada
-        let arrUnTypedChar = res[0].filter(i => i.nomeNavio.indexOf(str.toUpperCase())) //Array completo ordenado com nomes com letra digitada na frente
+        let arrTypedChar = res[0].filter(i => i.nomeNavio.indexOf(string.toUpperCase()) == 0) //Novo array apenas com letra iniciada
+        let arrUnTypedChar = res[0].filter(i => i.nomeNavio.indexOf(string.toUpperCase())) //Array completo ordenado com nomes com letra digitada na frente
         arrUnTypedChar.forEach(i => arrTypedChar.push(i))
         //console.log(res[0])
         $('#navio').autocomplete({
@@ -146,14 +145,18 @@ function getArray(){
     })
 }
 
+let patternReg = /Key[a-zA-Z]/
+let str = ''
+
 input1.addEventListener('keydown', (e) => {
-    if (e.keyCode >= 65 && e.keyCode <= 90) {
-        str = str + e.key
-        getArray()
-        //console.log(str)
+    if (e.code.match(patternReg)) {
+        str += e.code.slice(-1)
+        getArray(str)
+        console.log(str)
     }
-    if (e.keyCode == 8) {
+    if (e.key == 'Backspace') {
         str = str.slice(0, -1)
+        console.log(str)
     }
     if(e.key == 'Enter'){
         vessel()
