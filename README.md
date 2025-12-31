@@ -8,7 +8,7 @@ O usuário deve cadastrar o nome de um navio a ser monitorado pelo app, o app de
 
 ### Fase 1: Back-End(Node.js)
 
-- [x] Retirar do site da [praticagem](https://www.newpilots.com.br/) a listagem de navios atualizada através de web scraping.
+- [x] Retirar do site da [praticagem](https://www.praticagem-rj.com.br/) a listagem de navios atualizada através de web scraping.
 - [x] Criar uma função construtora com os atributos:
     ~~~ Javascript
     navio = {
@@ -66,3 +66,4 @@ O usuário deve cadastrar o nome de um navio a ser monitorado pelo app, o app de
     * Via Push?
     * Via SMS?
 - [ ] Desevolver interface gráfica
+
