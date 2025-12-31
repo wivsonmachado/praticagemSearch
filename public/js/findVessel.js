@@ -4,8 +4,8 @@ function returnSwitch(i) {
     let divNeto = document.createElement('p')
     let texto
     switch (i.manobra) {
-        case 'ENTRADA':
-            texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} para ${i.para}.`)
+        case 'E':
+            texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma entrada para ${i.para}.`)
 
             divFilho.className = 'resultado'
             divNeto.appendChild(texto)
@@ -13,8 +13,8 @@ function returnSwitch(i) {
             divPai.appendChild(divFilho)
             //console.log(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} para ${i.para}.`)
             break
-        case 'MUDANÇA':
-            texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de} para ${i.para}.`)
+        case 'M':
+            texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma mudança de ${i.de} para ${i.para}.`)
 
             divFilho.className = 'resultado'
             divNeto.appendChild(texto)
@@ -22,8 +22,8 @@ function returnSwitch(i) {
             divPai.appendChild(divFilho)
             //console.log(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de} para ${i.para}.`)
             break
-        case 'SAÍDA':
-            texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma ${i.manobra} de ${i.de}.`)
+        case 'S':
+            texto = document.createTextNode(`O navio ${i.nomeNavio} está com prático marcado para ${i.dataHora}hs, realizará uma saída de ${i.de}.`)
 
             divFilho.className = 'resultado'
             divNeto.appendChild(texto)
@@ -103,7 +103,7 @@ function vessel(shipName) {
 
 }
 
-let url = 'https://shielded-springs-02765.herokuapp.com/json'
+let url = 'http://localhost:3000/json'
 let arrFull
 const nameVesselArray = fetch(url).then((res) => res.json())
     .then(json => {
@@ -152,11 +152,11 @@ input1.addEventListener('keydown', (e) => {
     if (e.code.match(patternReg)) {
         str += e.code.slice(-1)
         getArray(str)
-        console.log(str)
+        //console.log(str)
     }
     if (e.key == 'Backspace') {
         str = str.slice(0, -1)
-        console.log(str)
+        //console.log(str)
     }
     if(e.key == 'Enter'){
         vessel()
